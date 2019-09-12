@@ -1,0 +1,56 @@
+<html>
+<head>
+
+</head>
+<body onclick="myFunction(event)">
+
+<h1 id="seeeee">Click the Number to view the DIV</h1>
+<p id="One" class="start">1</p>
+<p id="Two" class="start">2</p>
+<p id="Three" class="start">3</p>
+<p id="Four" class="start">4</p>
+<p id="Five" class="start">5</p>
+<p id="Six" class="start">6</p>
+
+<div id="demo" style="display:none;width:200px;height:200px;background:orange;">
+<p id="demo1"></p>
+<p>*****************</p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+</div>
+</body>
+<script>
+var x;
+ 
+
+function myFunction(event) { 
+  x = event.target.id;
+  
+   solar();
+}
+
+ function solar(){
+ //alert(x);
+ var y = document.getElementsByClassName("start");
+ //alert(y.length)
+ 
+ for(i = 0; i < y.length; i++){
+ var z = y[i];
+ if(x == z.id){
+ //alert("hello")
+ document.getElementById("demo").style.display = "block";
+ 
+ var m = i + 1;
+ document.getElementById("demo1").innerHTML = "you clicked number"+" "+m;
+ document.getElementById("demo2").innerHTML = "Clicked Element Id is"+" "+x;
+ document.getElementById("demo3").innerHTML = "Element index"+" "+i;
+ 
+}
+ 
+ }
+ 
+ }
+ 
+  
+</script>
+</html>
